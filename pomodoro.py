@@ -3,15 +3,16 @@ import time
 import subprocess
 cheering = "mixkit-small-group-cheer-and-applause-518.wav"
 break_over = "mixkit-classic-alarm-995.wav"
+ding = "mixkit-cowbell-sharp-hit-1743.wav"
 
 def main(work_duration, rest_duration):
     while True:
         print("WORK WORK WORK!!")
-        subprocess.run(["afplay", break_over])
+        subprocess.run(["afplay", ding])
         time.sleep(work_duration * 60)
 
         print("Time to rest!")
-        subprocess.run(["afplay", cheering])
+        subprocess.run(["afplay", ding])
         time.sleep(rest_duration * 60)
 
 if __name__ == "__main__":
